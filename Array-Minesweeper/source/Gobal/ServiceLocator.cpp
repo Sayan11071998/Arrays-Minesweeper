@@ -79,7 +79,9 @@ namespace Global
 
 	UIService* ServiceLocator::getUIService() { return ui_service; }
 
-	BoardService* ServiceLocator::getBoardService() { return board_service; }
+	BoardService* ServiceLocator::getBoardService() {
+		return board_service;
+	}
 
 	void ServiceLocator::deleteServiceLocator() { delete(this); }
 }
