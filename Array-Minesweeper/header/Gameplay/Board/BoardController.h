@@ -1,9 +1,12 @@
 #pragma once
+#include <SFML/Graphics.hpp>
 
 namespace Gameplay
 {
 	namespace Board
 	{
+		class BoardView;
+
 		class BoardController
 		{
 		public:
@@ -20,6 +23,8 @@ namespace Gameplay
 			void reset();
 
 		private:
+			BoardView* board_view;
+
 			void createBoard();
 			void destroy();
 			void deleteBoard();
