@@ -13,7 +13,7 @@ namespace Gameplay
 		class CellController
 		{
 		public:
-			CellController(sf::Vector2i grid_position);
+			CellController(int cell_index);
 			~CellController();
 
 			void initialize(float cell_width, float cell_height);
@@ -22,6 +22,7 @@ namespace Gameplay
 
 			CellState getCellState();
 			CellValue getCellValue();
+			int getCellIndex();
 			sf::Vector2i getCellPosition();
 
 			void reset();
