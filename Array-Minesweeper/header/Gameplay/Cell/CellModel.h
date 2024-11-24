@@ -29,7 +29,7 @@ namespace Gameplay
 		class CellModel
 		{
 		public:
-			CellModel(int cell_index);
+			CellModel(sf::Vector2i grid_position);
 			~CellModel();
 
 			CellState getCellState();
@@ -37,8 +37,6 @@ namespace Gameplay
 
 			CellValue getCellValue();
 			void setCellValue(CellValue value);
-
-			int getCellIndex();
 
 			sf::Vector2i getCellPosition();
 			void setCellPosition(sf::Vector2i grid_position);
@@ -49,7 +47,6 @@ namespace Gameplay
 			CellState cell_state;
 			CellValue cell_value;
 
-			int cell_index;
 			sf::Vector2i position;
 		};
 	}
