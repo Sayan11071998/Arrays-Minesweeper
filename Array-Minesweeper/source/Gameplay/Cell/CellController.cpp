@@ -1,12 +1,19 @@
 #include "../../header/Gameplay/Cell/CellController.h"
 #include "../../header/Gameplay/Cell/CellView.h"
+#include "../../header/Gameplay/Cell/CellModel.h"
+#include "../../header/Sound/SoundService.h"
+#include "../../header/Global/ServiceLocator.h"
 
 namespace Gameplay
 {
 	namespace Cell
 	{
-		CellController::CellController()
+		using namespace Global;
+		using namespace Sound;
+
+		CellController::CellController(sf::Vector2i grid_position)
 		{
+			cell_model = new CellModel(grid_position);
 			cell_view = new CellView(this);
 		}
 
@@ -15,9 +22,9 @@ namespace Gameplay
 			destroy();
 		}
 
-		void CellController::initialize()
+		void CellController::initialize(float cell_width, float cell_height)
 		{
-			cell_view->initialize();
+			cell_view->initialize(cell_width, cell_height);
 		}
 
 		void CellController::update()
@@ -30,13 +37,30 @@ namespace Gameplay
 			cell_view->render();
 		}
 
+		CellState CellController::getCellState()
+		{
+			return cell_model->getCellState();
+		}
+
+		CellValue CellController::getCellValue()
+		{
+			return cell_model->getCellValue();
+		}
+
+		sf::Vector2i CellController::getCellPosition()
+		{
+			return cell_model->getCellPosition();
+		}
+
 		void CellController::reset()
 		{
+			cell_model->reset();
 		}
 
 		void CellController::destroy()
 		{
 			delete(cell_view);
+			delete(cell_model);
 		}
 	}
 }

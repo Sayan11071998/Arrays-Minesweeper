@@ -13,7 +13,7 @@ namespace Gameplay
 			CellView(CellController* controller);
 			~CellView();
 
-			void initialize();
+			void initialize(float width, float height);
 			void update();
 			void render();
 
@@ -22,8 +22,10 @@ namespace Gameplay
 			CellController* cell_controller;
 
 			const int tile_size = 32;
+			const int slice_count = 12;
 
 			void initializeButtonImage(float width, float height);
+			void setCellTexture();
 		};
 	}
 }
