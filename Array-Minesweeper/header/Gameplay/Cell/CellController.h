@@ -20,6 +20,9 @@ namespace Gameplay
 			void update();
 			void render();
 
+			void openCell();
+			void flagCell();
+
 			CellState getCellState();
 			CellValue getCellValue();
 			sf::Vector2i getCellPosition();
