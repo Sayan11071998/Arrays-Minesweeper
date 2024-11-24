@@ -6,7 +6,7 @@
 
 namespace Gameplay
 {
-	namespace Cell
+	namespace Cell 
 	{
 		using namespace Global;
 		using namespace Sound;

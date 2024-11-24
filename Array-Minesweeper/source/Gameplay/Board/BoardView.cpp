@@ -56,5 +56,15 @@ namespace Gameplay
 			board_image->initialize(Config::board_texture_path, board_width, board_height, sf::Vector2f(0, 0));
 			board_image->setCentreAlinged();
 		}
+
+		float BoardView::getCellWidth()
+		{
+			return (board_width - board_width_offset) / static_cast<float>(BoardController::number_of_colums);
+		}
+
+		float BoardView::getCellHeight()
+		{
+			return (board_height - board_height_offset) / static_cast<float>(BoardController::number_of_rows);
+		}
 	}
 }
