@@ -41,6 +41,11 @@ namespace Gameplay
 		return remaining_time;
 	}
 
+	int GameplayController::getMinesCount()
+	{
+		return ServiceLocator::getInstance()->getBoardService()->getMinesCount();
+	}
+
 	void GameplayController::updateRemainingTime()
 	{
 		remaining_time -= ServiceLocator::getInstance()->getTimeService()->getDeltaTime();

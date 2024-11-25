@@ -81,6 +81,11 @@ namespace Gameplay
 			resetBoard();
 		}
 
+		int BoardController::getMinesCount()
+		{
+			return mines_count;
+		}
+
 		void BoardController::resetBoard()
 		{
 			for (int row = 0; row < number_of_rows; row++)

@@ -14,6 +14,7 @@ namespace Gameplay
 		void reset();
 		
 		float getRemainingTime();
+		int getMinesCount();
 
 	private:
 		const float max_duration = 301.f;

@@ -16,6 +16,8 @@ namespace Gameplay
 			void render();
 			void resetBoard();
 
+			int getMinesCount();
+
 		private:
 			Board::BoardController* board_controller;
 
