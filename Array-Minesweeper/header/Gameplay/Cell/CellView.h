@@ -27,6 +27,9 @@ namespace Gameplay
 			const float cell_top_offset = 274.f;
 			const float cell_left_offset = 583.f;
 
+			const float cell_texture_width = 384.f;
+			const float cell_texture_height = 32.f;
+
 
 			void initializeButtonImage(float width, float height);
 			void setCellTexture();

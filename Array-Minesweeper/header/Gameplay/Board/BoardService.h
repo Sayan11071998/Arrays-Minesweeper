@@ -1,5 +1,7 @@
 #pragma once
 #include "../../header/Gameplay/Board/BoardController.h"
+#include "../../header/Gameplay/Cell/CellController.h"
+#include "../../header/UI/UIElement/ButtonView.h"
 
 namespace Gameplay
 {

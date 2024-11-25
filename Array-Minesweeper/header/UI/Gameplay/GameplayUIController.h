@@ -1,5 +1,4 @@
 #pragma once
-
 #include "../../header/UI/Interface/IUIController.h"
 #include "../../header/UI/UIElement/TextView.h"
 #include "../../header/UI/UIElement/ButtonView.h"

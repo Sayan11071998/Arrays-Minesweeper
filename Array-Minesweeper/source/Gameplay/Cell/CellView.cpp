@@ -6,6 +6,8 @@
 #include "../../header/Gameplay/Cell/CellModel.h"
 #include "../../header/Global/Config.h"
 #include "../../header/Global/ServiceLocator.h"
+#include "../../header/Gameplay/GameplayService.h"
+#include "../../header/Sound/SoundService.h"
 
 namespace Gameplay
 {
@@ -13,6 +15,7 @@ namespace Gameplay
 	{
 		using namespace UI::UIElement;
 		using namespace Global;
+		using namespace Sound;
 
 		CellView::CellView(CellController* controller)
 		{

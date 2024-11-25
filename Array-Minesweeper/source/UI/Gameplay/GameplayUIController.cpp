@@ -79,12 +79,12 @@ namespace UI
 
 		void GameplayUIController::initializeTimeText()
 		{
-			time_text->initialize("000", sf::Vector2f(time_text_left_offset, time_text_top_offset), FontType::BUBBLE_BOBBLE, font_size, text_color);
+			time_text->initialize("000", sf::Vector2f(time_text_left_offset, time_text_top_offset), FontType::ROBOTO, font_size, text_color);
 		}
 
 		void GameplayUIController::initializeMineText()
 		{
-			mine_text->initialize("000", sf::Vector2f(mine_text_left_offset, mine_text_top_offset), FontType::BUBBLE_BOBBLE, font_size, text_color);
+			mine_text->initialize("000", sf::Vector2f(mine_text_left_offset, mine_text_top_offset), FontType::ROBOTO, font_size, text_color);
 		}
 
 		void GameplayUIController::updateTimeText()

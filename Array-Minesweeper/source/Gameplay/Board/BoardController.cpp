@@ -88,9 +88,9 @@ namespace Gameplay
 
 		void BoardController::resetBoard()
 		{
-			for (int row = 0; row < number_of_rows; row++)
+			for (int row = 0; row < number_of_rows; ++row)
 			{
-				for (int col = 0; col < number_of_colums; col++)
+				for (int col = 0; col < number_of_colums; ++col)
 				{
 					board[row][col]->reset();
 				}

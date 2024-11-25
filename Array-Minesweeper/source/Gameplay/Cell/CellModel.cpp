@@ -42,6 +42,15 @@ namespace Gameplay
 			position = grid_position;
 		}
 
+		int CellModel::getMinesAround()
+		{
+			return 0;
+		}
+
+		/*void CellModel::setMinesAround(int mine_count)
+		{
+		}*/
+
 		void CellModel::reset()
 		{
 			cell_state = CellState::HIDDEN;

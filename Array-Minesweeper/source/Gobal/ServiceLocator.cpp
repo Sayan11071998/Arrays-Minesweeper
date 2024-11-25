@@ -9,7 +9,7 @@ namespace Global
 	using namespace UI;
 	using namespace Main;
 	using namespace Gameplay;
-	using namespace Gameplay::Board;
+	using namespace Board;
 	using namespace Time;
 
 	ServiceLocator::ServiceLocator()

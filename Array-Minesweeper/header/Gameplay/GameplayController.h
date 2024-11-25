@@ -1,4 +1,6 @@
 #pragma once
+#include "../../header/Gameplay/Board/BoardController.h"
+#include <SFML/Graphics.hpp>
 
 namespace Gameplay
 {
