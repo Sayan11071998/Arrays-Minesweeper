@@ -15,6 +15,8 @@ namespace Gameplay
 		void render();
 		void startGame();
 
+		float getRemainingTime();
+
 	private:
 		GameplayController* gameplay_controller;
 

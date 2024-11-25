@@ -12,7 +12,13 @@ namespace Gameplay
 		void update();
 		void render();
 		void reset();
+		
+		float getRemainingTime();
 
 	private:
+		const float max_duration = 301.f;
+		float remaining_time;
+
+		void updateRemainingTime();
 	};
 }
