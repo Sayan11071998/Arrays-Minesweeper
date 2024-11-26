@@ -39,11 +39,7 @@ namespace Gameplay
 
 		void CellController::openCell()
 		{
-			if (cell_model->getCellState() != CellState::FLAGGED)
-			{
-				cell_model->setCellState(CellState::OPEN);
-				ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
-			}
+			setCellState(CellState::OPEN);
 		}
 
 		void CellController::flagCell()
@@ -61,9 +57,19 @@ namespace Gameplay
 			ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::FLAG);
 		}
 
+		bool CellController::canOpenCell()
+		{
+			return cell_model->getCellState() != CellState::FLAGGED && cell_model->getCellState() != CellState::OPEN;
+		}
+
 		CellState CellController::getCellState()
 		{
 			return cell_model->getCellState();
+		}
+
+		void CellController::setCellState(CellState state)
+		{
+			cell_model->setCellState(state);
 		}
 
 		CellValue CellController::getCellValue()
@@ -71,15 +77,15 @@ namespace Gameplay
 			return cell_model->getCellValue();
 		}
 
+		void CellController::setCellValue(CellValue value)
+		{
+			cell_model->setCellValue(value);
+		}
+
 		sf::Vector2i CellController::getCellPosition()
 		{
 			return cell_model->getCellPosition();
 		}
-
-		/*int CellController::getMinesAround()
-		{
-			return cell_model->getMinesAround();
-		}*/
 
 		void CellController::reset()
 		{
