@@ -1,9 +1,13 @@
 #pragma once
+#include <SFML/Graphics.hpp>
+#include "../../header/Gameplay/Cell/CellController.h"
 
 namespace Gameplay
 {
 	namespace Board
 	{
+		class BoardView;
+
 		class BoardController
 		{
 		public:
@@ -19,9 +23,16 @@ namespace Gameplay
 			void render();
 			void reset();
 
+			int getMinesCount();
+
 		private:
+			BoardView* board_view;
+			Cell::CellController* board[number_of_rows][number_of_colums];
+
 			void createBoard();
+			void initializeCells();
 			void destroy();
+			void resetBoard();
 			void deleteBoard();
 		};
 	}

@@ -1,5 +1,7 @@
 #pragma once
 #include "../../header/Gameplay/Board/BoardController.h"
+#include "../../header/Gameplay/Cell/CellController.h"
+#include "../../header/UI/UIElement/ButtonView.h"
 
 namespace Gameplay
 {
@@ -15,6 +17,8 @@ namespace Gameplay
 			void update();
 			void render();
 			void resetBoard();
+
+			int getMinesCount();
 
 		private:
 			Board::BoardController* board_controller;

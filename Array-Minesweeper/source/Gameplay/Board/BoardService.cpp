@@ -4,6 +4,10 @@ namespace Gameplay
 {
 	namespace Board
 	{
+		using namespace Cell;
+		using namespace UI;
+		using namespace UI::UIElement;
+
 		BoardService::BoardService()
 		{
 			board_controller = nullptr;
@@ -33,6 +37,12 @@ namespace Gameplay
 		void BoardService::resetBoard()
 		{
 			board_controller->reset();
+		}
+
+		int BoardService::getMinesCount()
+		{
+			//return board_controller->getMinesCount();
+			return board_controller->mines_count;
 		}
 
 		void BoardService::destroy()
