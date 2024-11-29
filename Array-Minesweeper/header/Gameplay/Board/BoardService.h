@@ -27,6 +27,7 @@ namespace Gameplay
 			void setBoardState(BoardState state);
 
 			void showBoard();
+			void flagAllMines();
 
 		private:
 			Board::BoardController* board_controller;

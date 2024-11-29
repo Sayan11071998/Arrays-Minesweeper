@@ -39,6 +39,7 @@ namespace Gameplay
 			void setBoardState(BoardState state);
 
 			void showBoard();
+			void flagAllMines();
 
 			void reset();
 

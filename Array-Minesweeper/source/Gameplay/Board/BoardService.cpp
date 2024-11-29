@@ -64,6 +64,11 @@ namespace Gameplay
 			board_controller->showBoard();
 		}
 
+		void BoardService::flagAllMines()
+		{
+			board_controller->flagAllMines();
+		}
+
 		void BoardService::destroy()
 		{
 			delete(board_controller);
