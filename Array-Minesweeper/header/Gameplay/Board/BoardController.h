@@ -38,6 +38,8 @@ namespace Gameplay
 			BoardState getBoardState();
 			void setBoardState(BoardState state);
 
+			void showBoard();
+
 			void reset();
 
 		private:
@@ -62,6 +64,7 @@ namespace Gameplay
 			void processCellValue(sf::Vector2i cell_position);
 			void openEmptyCells(sf::Vector2i cell_position);
 			void processEmptyCell(sf::Vector2i cell_position);
+			void processMineCell(sf::Vector2i cell_position);
 
 			void destroy();
 			void resetBoard();
