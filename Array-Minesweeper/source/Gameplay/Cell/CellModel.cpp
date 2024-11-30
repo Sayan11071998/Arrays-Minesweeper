@@ -47,9 +47,9 @@ namespace Gameplay
 			return 0;
 		}
 
-		/*void CellModel::setMinesAround(int mine_count)
+		void CellModel::setMinesAround()
 		{
-		}*/
+		}
 
 		void CellModel::reset()
 		{

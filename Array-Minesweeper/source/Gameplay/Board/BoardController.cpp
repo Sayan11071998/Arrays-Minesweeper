@@ -114,6 +114,11 @@ namespace Gameplay
 			board[cell_position.x][cell_position.y]->flagCell();
 		}
 
+		bool BoardController::areAllCellOpen()
+		{
+			return false;
+		}
+
 		void BoardController::populateBoard(sf::Vector2i cell_position)
 		{
 			populateMines(cell_position);
@@ -268,6 +273,10 @@ namespace Gameplay
 						flagCell(sf::Vector2i(row, col));
 				}
 			}
+		}
+
+		void BoardController::openAllCells()
+		{
 		}
 
 		void BoardController::processCellInput(Cell::CellController* cell_controller, UI::UIElement::ButtonType button_type)

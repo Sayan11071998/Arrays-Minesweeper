@@ -34,12 +34,12 @@ namespace Gameplay
 			void processCellInput(Cell::CellController* cell_controller, UI::UIElement::ButtonType button_type);
 
 			int getMinesCount();
-
 			BoardState getBoardState();
 			void setBoardState(BoardState state);
 
 			void showBoard();
 			void flagAllMines();
+			void openAllCells();
 
 			void reset();
 
@@ -56,14 +56,17 @@ namespace Gameplay
 
 			void openCell(sf::Vector2i cell_position);
 			void flagCell(sf::Vector2i cell_position);
+			bool areAllCellOpen();
+			
 			void populateBoard(sf::Vector2i cell_position);
 			void populateMines(sf::Vector2i cell_position);
 			void pupulateCells();
 			int countMinesAround(sf::Vector2i cell_position);
+			
 			bool isValidCellPosition(sf::Vector2i cell_position);
-			void openAllCell();
-			void processCellValue(sf::Vector2i cell_position);
 			void openEmptyCells(sf::Vector2i cell_position);
+			
+			void processCellValue(sf::Vector2i cell_position);
 			void processEmptyCell(sf::Vector2i cell_position);
 			void processMineCell(sf::Vector2i cell_position);
 

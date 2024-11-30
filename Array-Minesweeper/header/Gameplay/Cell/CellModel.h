@@ -42,7 +42,7 @@ namespace Gameplay
 			void setCellPosition(sf::Vector2i grid_position);
 
 			int getMinesAround();
-			/*void setMinesAround(int mine_count);*/
+			void setMinesAround();
 
 			void reset();
 
