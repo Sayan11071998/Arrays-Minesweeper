@@ -36,7 +36,12 @@ namespace Gameplay
 
 	void GameplayService::startGame()
 	{
-		gameplay_controller->reset();
+		gameplay_controller->restart();
+	}
+
+	void GameplayService::endGame(GameResult result)
+	{
+		gameplay_controller->endGame(result);
 	}
 
 	float GameplayService::getRemainingTime()

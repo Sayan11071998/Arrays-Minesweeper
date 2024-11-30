@@ -5,6 +5,8 @@
 
 namespace Gameplay
 {
+	enum class GameResult;
+
 	namespace Board
 	{
 		class BoardService
@@ -21,6 +23,11 @@ namespace Gameplay
 			void processCellInput(Cell::CellController* cell_controller, UI::UIElement::ButtonType button_type);
 
 			int getMinesCount();
+			BoardState getBoardState();
+			void setBoardState(BoardState state);
+
+			void showBoard();
+			void flagAllMines();
 
 		private:
 			Board::BoardController* board_controller;

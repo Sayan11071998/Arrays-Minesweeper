@@ -44,6 +44,12 @@ namespace Gameplay
 
 		void CellController::flagCell()
 		{
+			if (ServiceLocator::getInstance()->getBoardService()->getBoardState() == Gameplay::Board::BoardState::COMPLETED)
+			{
+				cell_model->setCellState(CellState::FLAGGED);
+				return;
+			}
+
 			switch (cell_model->getCellState())
 			{
 			case::Gameplay::Cell::CellState::FLAGGED:
@@ -85,6 +91,11 @@ namespace Gameplay
 		sf::Vector2i CellController::getCellPosition()
 		{
 			return cell_model->getCellPosition();
+		}
+
+		int CellController::getMinesAround()
+		{
+			return cell_model->getMinesAround();
 		}
 
 		void CellController::reset()

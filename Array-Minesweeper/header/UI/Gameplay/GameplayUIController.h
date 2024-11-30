@@ -42,12 +42,15 @@ namespace UI
 
 			void createTexts();
 			void createButton();
+
 			void initializeTexts();
 			void initializeButton();
 			void initializeTimeText();
 			void initializeMineText();
+
 			void updateTimeText();
 			void updateMineText();
+
 			void registerButtonCallback();
 			void restartButtonCallback();
 
