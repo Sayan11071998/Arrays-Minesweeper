@@ -1,4 +1,5 @@
 #include "../../header/Gameplay/Board/BoardService.h"
+#include "../../header/Gameplay/GameplayController.h"
 
 namespace Gameplay
 {
@@ -46,7 +47,8 @@ namespace Gameplay
 
 		int BoardService::getMinesCount()
 		{
-			return board_controller->mines_count;
+			return board_controller->getMinesCount();
+			//return board_controller->mines_count;
 		}
 
 		BoardState BoardService::getBoardState()

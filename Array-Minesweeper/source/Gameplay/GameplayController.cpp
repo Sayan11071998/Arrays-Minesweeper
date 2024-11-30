@@ -19,10 +19,12 @@ namespace Gameplay
 
 	GameplayController::~GameplayController()
 	{
+		board_service = nullptr;
 	}
 
 	void GameplayController::initialize()
 	{
+		board_service = ServiceLocator::getInstance()->getBoardService();
 	}
 
 	void GameplayController::update()
@@ -36,12 +38,6 @@ namespace Gameplay
 	{
 	}
 
-	void GameplayController::reset()
-	{
-		ServiceLocator::getInstance()->getBoardService()->resetBoard();
-		remaining_time = max_duration;
-	}
-
 	float GameplayController::getRemainingTime()
 	{
 		return remaining_time;
@@ -49,7 +45,14 @@ namespace Gameplay
 
 	int GameplayController::getMinesCount()
 	{
-		return ServiceLocator::getInstance()->getBoardService()->getMinesCount();
+		return board_service->getMinesCount();
+	}
+
+	void GameplayController::restart()
+	{
+		game_result = GameResult::NONE;
+		board_service->resetBoard();
+		remaining_time = max_duration;
 	}
 
 	void GameplayController::endGame(GameResult result)
@@ -69,6 +72,9 @@ namespace Gameplay
 
 	void GameplayController::updateRemainingTime()
 	{
+		if (game_result == GameResult::WON)
+			return;
+
 		remaining_time -= ServiceLocator::getInstance()->getTimeService()->getDeltaTime();
 	}
 

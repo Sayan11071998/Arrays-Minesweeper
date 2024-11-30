@@ -32,47 +32,49 @@ namespace Gameplay
 			void render();
 			
 			void processCellInput(Cell::CellController* cell_controller, UI::UIElement::ButtonType button_type);
+			void reset();
 
-			int getMinesCount();
 			BoardState getBoardState();
 			void setBoardState(BoardState state);
 
-			void showBoard();
+			int getMinesCount();
+
 			void flagAllMines();
 			void openAllCells();
-
-			void reset();
+			void showBoard();
 
 		private:
 			BoardView* board_view;
 			Cell::CellController* board[number_of_rows][number_of_colums];
-			int flagged_cells;
-			BoardState board_state;
+			
 			std::default_random_engine random_engine;
 			std::random_device random_device;
+			
+			BoardState board_state;
+			int flagged_cells;
 
 			void createBoard();
 			void initializeCells();
 
-			void openCell(sf::Vector2i cell_position);
-			void flagCell(sf::Vector2i cell_position);
-			bool areAllCellOpen();
-			
 			void populateBoard(sf::Vector2i cell_position);
 			void populateMines(sf::Vector2i cell_position);
 			void pupulateCells();
 			int countMinesAround(sf::Vector2i cell_position);
-			
-			bool isValidCellPosition(sf::Vector2i cell_position);
-			void openEmptyCells(sf::Vector2i cell_position);
-			
+
+			void flagCell(sf::Vector2i cell_position);
+			void openCell(sf::Vector2i cell_position);
+			bool areAllCellOpen();
+
 			void processCellValue(sf::Vector2i cell_position);
 			void processEmptyCell(sf::Vector2i cell_position);
 			void processMineCell(sf::Vector2i cell_position);
 
-			void destroy();
+			void openEmptyCells(sf::Vector2i cell_position);
+			bool isValidCellPosition(sf::Vector2i cell_position);
+
 			void resetBoard();
 			void deleteBoard();
+			void destroy();
 		};
 	}
 }

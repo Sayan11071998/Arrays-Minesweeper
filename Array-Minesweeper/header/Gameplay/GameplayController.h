@@ -24,11 +24,11 @@ namespace Gameplay
 		void initialize();
 		void update();
 		void render();
-		void reset();
 		
 		float getRemainingTime();
 		int getMinesCount();
 
+		void restart();
 		void endGame(GameResult result);
 
 	private:
