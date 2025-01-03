@@ -14,6 +14,6 @@ This project has been an incredible ride of excitement, challenges, and "Aha!" m
 - **🧩 OOP Principles:** Applied C++ Object-Oriented Programming to make the game flexible and future-proof. 🛡️
 - **🎮 Game Dev Skills:** Explored the magic of SFML to bring this project to life with visuals, animations, and sounds. 🎵✨
 
-![Array_Minesweeper_01](https://github.com/user-attachments/assets/0bf76dbd-70be-4fae-93fb-1c1accc18e2b)
-![Array_Minesweeper_02](https://github.com/user-attachments/assets/23b0c2e3-483b-4310-9853-9b5cae326aae)
-![Array_Minesweeper_03](https://github.com/user-attachments/assets/d8ee197a-aa50-4cde-a468-c6f33dff2adf)
+![Mine_Sweeper_01](https://github.com/user-attachments/assets/0a3a99ed-d2ab-4f70-b873-aba73eb87e23)
+![Mine_Sweeper_02](https://github.com/user-attachments/assets/43b57102-4ed5-4929-a1ef-1913dce00613)
+![Mine_Sweeper_03](https://github.com/user-attachments/assets/bac094c5-e010-49d8-9dbf-c9ad15def5c4)
