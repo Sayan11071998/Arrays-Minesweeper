@@ -42,7 +42,9 @@ This project has been an incredible ride of excitement, challenges, and “Aha!�
 
 ---
 
-## 📂 Project Structure
+[![Watch the video](https://img.youtube.com/vi/VnezXeGtq2U/maxresdefault.jpg)](https://youtu.be/VnezXeGtq2U)
+
+### [Gameplay Video](https://youtu.be/VnezXeGtq2U)
 
 
 ![2D_Array_MineSweeper_01](https://github.com/user-attachments/assets/43afc29a-3451-43b8-b715-cff13703bb2e)
