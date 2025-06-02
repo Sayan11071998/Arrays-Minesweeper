@@ -43,7 +43,6 @@ This project has been an incredible ride of excitement, challenges, and â€œAha!â
 ---
 
 [![Watch the video](https://img.youtube.com/vi/VnezXeGtq2U/maxresdefault.jpg)](https://youtu.be/VnezXeGtq2U)
-
 ### [Gameplay Video](https://youtu.be/VnezXeGtq2U)
 
 
